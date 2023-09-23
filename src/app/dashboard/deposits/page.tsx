@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-export default function MoneyTransfer() {
+export default function Deposits() {
   return (
     <div className="mx-auto my-auto">
       <div className="font-manrope flex h-screen w-full items-center justify-center">

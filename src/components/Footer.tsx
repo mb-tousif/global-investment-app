@@ -1,11 +1,16 @@
+import Image from "next/image";
+import logo from "@/assets/logo.png";
+
 const footerStyle: React.CSSProperties = {
   padding: "1rem",
   textAlign: "center",
+  color: "white",
+  fontWeight: "bold",
 };
 export default function Footer() {
   return (
-    <div style={footerStyle} className="bg-[#ebf6f5]">
-      <p className="text-zinc-900 m-8">
+    <div style={footerStyle} className="bg-[#074c7d] h-[100px]">
+      <p className="mt-4">
         All right reserved & Copyright &#169; {new Date().getFullYear()}.
       </p>
     </div>

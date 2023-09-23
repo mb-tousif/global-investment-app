@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link";
 import React, { useState } from "react";
 import { GiReceiveMoney, GiPayMoney } from "react-icons/gi";
@@ -18,14 +19,14 @@ const routes = [
     link: "/blogs",
   },
   {
-    id: 4,
-    name: "Sign up",
-    link: "/register",
-  },
-  {
     id: 5,
     name: "Dashboard",
     link: "/dashboard",
+  },
+  {
+    id: 4,
+    name: "Sign up",
+    link: "/register",
   },
 ];
 export default function Header() {
@@ -35,7 +36,7 @@ export default function Header() {
     setToken(!token);
   };
   return (
-    <nav className="bg-[#020c53] w-full text-[#fff] relative z-10">
+    <nav className="bg-[#071948] w-full text-[#fff] relative z-10">
       <div className="flex items-center justify-between h-16">
         <div className="flex flex-auto">
           <div className="hidden mx-auto my-auto md:block">
@@ -67,10 +68,7 @@ export default function Header() {
               )}
             </div>
           </div>
-          <div
-            className="md:hidden flex"
-            onClick={() => setOpen(!open)}
-          >
+          <div className="md:hidden flex" onClick={() => setOpen(!open)}>
             <div className="flex justify-items-end">
               {open ? (
                 <GiReceiveMoney className="ml-4 w-8 h-8" />
