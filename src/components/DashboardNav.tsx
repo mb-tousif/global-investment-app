@@ -9,7 +9,7 @@ import { GiTakeMyMoney, GiProfit } from "react-icons/gi";
 import { AiOutlineStock } from "react-icons/ai";
 import { TbTransferOut } from "react-icons/tb";
 
-export default function SideNavbar() {
+export default function DashboardNav() {
   const [toggle, setToggle] = React.useState(false);
   const navigate = (path:string) => {
     window.location.pathname = path;
@@ -18,7 +18,7 @@ export default function SideNavbar() {
     setToggle(!toggle);
   }
   return (
-    <div className="sm:min-w-[38vh] max-h-screen text-left top-0 pb-6 left-0 min-h-4/5 bg-gradient-to-b from-[#D0DAE3] to-[#ADCDED]">
+    <div className="sm:min-w-[38vh] text-left top-0 pb-6 left-0 min-h-4/5 bg-gradient-to-b from-[#D0DAE3] to-[#ADCDED]">
       <div className="m-2 mb-2 mt-20 flex">
         <BiSolidDashboard className="w-6 h-8" />
         <Link
