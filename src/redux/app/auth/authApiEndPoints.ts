@@ -1,6 +1,6 @@
 import { api } from "@/redux/api";
 
-const userApi = api.injectEndpoints({
+const authApi = api.injectEndpoints({
   endpoints: (builder) => ({
     getAllUsers: builder.query({
       query: () => ({
@@ -52,9 +52,9 @@ const userApi = api.injectEndpoints({
 });
 
 export const { 
-    useGetAllUsersQuery, 
-    useGetUserByIdQuery, 
-    useLoginUserMutation, 
-    useRegisterUserMutation, 
-    useUpdateUserMutation
-} = userApi;
+  useGetAllUsersQuery, 
+  useGetUserByIdQuery, 
+  useLoginUserMutation, 
+  useRegisterUserMutation, 
+  useUpdateUserMutation
+} = authApi;
