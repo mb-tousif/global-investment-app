@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import "./globals.css";
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
+import RootProvider from "@/lib/provider";
 
 export const metadata: Metadata = {
   title: "Crypto Trade Ltd",
@@ -15,12 +16,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>
-        <Navbar />
+    <RootProvider>
+      <html lang="en">
+        <body>
+          <Navbar />
           <div>{children}</div>
-        <Footer />
-      </body>
-    </html>
+          <Footer />
+        </body>
+      </html>
+    </RootProvider>
   );
 }
