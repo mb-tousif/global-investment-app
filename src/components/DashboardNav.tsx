@@ -18,7 +18,7 @@ export default function DashboardNav() {
     setToggle(!toggle);
   }
   return (
-    <div className="sm:min-w-[38vh] text-left top-0 pb-6 left-0 min-h-4/5 bg-gradient-to-b from-[#D0DAE3] to-[#ADCDED]">
+    <div className="sm:min-w-[38vh] text-left top-0 pb-6 left-0 min-h-screen bg-gradient-to-b from-[#D0DAE3] to-[#ADCDED]">
       <div className="m-2 mb-2 mt-20 flex">
         <BiSolidDashboard className="w-6 h-8" />
         <Link
