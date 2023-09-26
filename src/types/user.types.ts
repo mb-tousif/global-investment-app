@@ -12,5 +12,5 @@ export type TUserLoginData = {
 };
 
 export type TUserLoginResponse = {
-  token: string;
+  token: string | null;
 };
