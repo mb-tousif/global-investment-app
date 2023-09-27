@@ -5,6 +5,8 @@ import { Provider } from 'react-redux'
 
 export default function RootProvider({children}: {children: React.ReactNode}) {
   return (
-    <Provider store={store}>{children}</Provider>
-  )
+    <Provider store={store}>
+      {children}
+    </Provider>
+  );
 }

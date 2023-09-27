@@ -73,7 +73,7 @@ export default function Login() {
                         pattern: {
                           value:
                             /^(?=.*[a-z]{3,})(?=.*[A-Z])(?=.*\d)(?=.*[^\w\d])(.{6,})$/,
-                          message: "Password is not valid!",
+                          message: "Password must be strong!",
                         },
                       })}
                       className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-green-600"

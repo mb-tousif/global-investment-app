@@ -1,8 +1,7 @@
 "use client"
 import Image from "next/image";
-import leftImage from "../../assets/signup.jpg";
+import leftImage from "@/assets/signup.jpg";
 import { SubmitHandler, useForm } from "react-hook-form";
-
 interface IFormData {
   name: string;
   email: string;
@@ -20,9 +19,8 @@ export default function Register() {
     handleSubmit,
     formState: { errors },
   } = useForm<IFormData>();
-  const onSubmit: SubmitHandler<IFormData> = (data,e:any) => {
+  const onSubmit: SubmitHandler<IFormData> = (data, e:any) => {
     e.preventDefault();
-    console.log(data)
   };
 
   return (
@@ -103,24 +101,35 @@ export default function Register() {
                   <input
                     className="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                     {...register("password", {
-                      minLength: {
-                        value: 6,
-                        message: "Password min-length six characters",
-                      },
                       required: {
                         value: true,
                         message: "Password is required",
+                      },
+                      pattern: {
+                        value:
+                          /^(?=.*[a-z]{3,})(?=.*[A-Z])(?=.*\d)(?=.*[^\w\d])(.{6,})$/,
+                        message:
+                          "Password must be with one uppercase, number and special character",
+                      },
+                      minLength: {
+                        value: 6,
+                        message: "Password min-length six characters",
                       },
                     })}
                     type="password"
                     placeholder="******************"
                   />
-                  {errors.password?.type === "minLength" && (
+                  {errors.password?.type === "required" && (
                     <p className="text-rose-600 text-center text-sm">
                       {errors.password.message}
                     </p>
                   )}
-                  {errors.password?.type === "required" && (
+                  {errors.password?.type === "pattern" && (
+                    <span className="text-red-600 text-xs">
+                      {errors.password.message}
+                    </span>
+                  )}
+                  {errors.password?.type === "minLength" && (
                     <p className="text-rose-600 text-center text-sm">
                       {errors.password.message}
                     </p>
@@ -146,7 +155,7 @@ export default function Register() {
                   )}
                 </div>
               </div>
-              {/* upload image  later
+              upload image later
               <div className="mb-4">
                 <label className="flex flex-col items-center px-4 py-6 bg-white text-[#03A776] rounded-lg shadow border border-blue cursor-pointer hover:bg-blue">
                   <svg
@@ -169,7 +178,7 @@ export default function Register() {
                     Upload your profile picture.
                   </p>
                 )}
-              </div> */}
+              </div>
               <div className="mb-4">
                 <label
                   className="block mb-2 text-sm font-bold text-gray-700"
