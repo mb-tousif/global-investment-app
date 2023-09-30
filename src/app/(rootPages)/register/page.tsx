@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image";
-import leftImage from "@/assets/signup.jpg";
+import leftImage from "@/assets/signup.svg";
 import { SubmitHandler, useForm } from "react-hook-form";
 interface IFormData {
   name: string;
@@ -19,9 +19,11 @@ export default function Register() {
     handleSubmit,
     formState: { errors },
   } = useForm<IFormData>();
-  const onSubmit: SubmitHandler<IFormData> = (data, e:any) => {
+  const onSubmit: SubmitHandler<IFormData> = async (data, e:any) => {
     e.preventDefault();
+    // upload image to cloudinary
   };
+
 
   return (
     <div className="pt-8 pb-6 mx-auto bg-[#e0dada]">
