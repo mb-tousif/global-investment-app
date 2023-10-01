@@ -1,3 +1,4 @@
+import CountDown from "@/components/CountDown";
 import React from "react";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+      <CountDown />
       </div>
     </section>
   );
