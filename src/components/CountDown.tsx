@@ -23,6 +23,7 @@ const CountDown = () => {
       clearInterval(timer);
     };
   });
+  
   return (
     <div className="flex align-middle justify-center">
       <span className="font-bold text-5xl text-[#03A776]">

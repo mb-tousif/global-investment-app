@@ -28,7 +28,7 @@ export default function DashboardNav() {
       <div className="m-2 mb-2">
         <Link href="/dashboard" className="flex">
           <BiSolidDashboard className="w-6 h-8" />
-          <span className="sm:flex hidden text-sm font-medium text-gray-700 py-2 px-2 hover:bg-[#1c3a13] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+          <span className="sm:flex hidden text-sm font-medium text-gray-700 py-2 px-2 hover:bg-[#1c3a13] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out hover:ml-2">
             Dashboard
           </span>
         </Link>
@@ -36,7 +36,7 @@ export default function DashboardNav() {
       <div className="m-2">
         <Link href="/dashboard/admin" className="flex">
           <MdAdminPanelSettings className="w-6 h-8" />
-          <span className="sm:flex hidden text-sm font-medium text-gray-700 py-2 px-2 hover:bg-[#1c3a13] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+          <span className="sm:flex hidden text-sm font-medium text-gray-700 py-2 px-2 hover:bg-[#1c3a13] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out hover:ml-2">
             Admin
           </span>
         </Link>
@@ -44,7 +44,7 @@ export default function DashboardNav() {
       <div className="m-2">
         <Link href="/dashboard/user" className="flex">
           <RiAccountBoxFill className="w-6 h-8" />
-          <span className="sm:flex hidden text-sm font-medium text-gray-700 py-2 px-2 hover:bg-[#1c3a13] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+          <span className="sm:flex hidden text-sm font-medium text-gray-700 py-2 px-2 hover:bg-[#1c3a13] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out hover:ml-2">
             My Profile
           </span>
         </Link>
@@ -52,7 +52,7 @@ export default function DashboardNav() {
       <div className="m-2">
         <Link href="/dashboard/wallet" className="flex">
           <ImProfile className="w-6 h-8" />
-          <span className="sm:flex hidden text-sm font-medium text-gray-700 py-2 px-2 hover:bg-[#1c3a13] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+          <span className="sm:flex hidden text-sm font-medium text-gray-700 py-2 px-2 hover:bg-[#1c3a13] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out hover:ml-2">
             My Account
           </span>
         </Link>
@@ -60,7 +60,7 @@ export default function DashboardNav() {
       <div className="m-2">
         <Link href="/dashboard/deposits" className="flex">
           <MdOutlineGetApp className="w-6 h-8" />
-          <span className="sm:flex hidden text-sm font-medium text-gray-700 py-2 px-2 hover:bg-[#1c3a13] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+          <span className="sm:flex hidden text-sm font-medium text-gray-700 py-2 px-2 hover:bg-[#1c3a13] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out hover:ml-2">
             Deposits
           </span>
         </Link>
@@ -68,7 +68,7 @@ export default function DashboardNav() {
       <div className="m-2">
         <Link href="/dashboard/transfers" className="flex">
           <TbTransferOut className="w-6 h-8" />
-          <span className="sm:flex hidden text-sm font-medium text-gray-700 py-2 px-2 hover:bg-[#1c3a13] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+          <span className="sm:flex hidden text-sm font-medium text-gray-700 py-2 px-2 hover:bg-[#1c3a13] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out hover:ml-2">
             Transfer
           </span>
         </Link>
@@ -76,7 +76,7 @@ export default function DashboardNav() {
       <div className="m-2">
         <Link href="/dashboard/withdraws" className="flex">
           <GiTakeMyMoney className="w-6 h-8" />
-          <span className="sm:flex hidden text-sm font-medium text-gray-700 py-2 px-2 hover:bg-[#1c3a13] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+          <span className="sm:flex hidden text-sm font-medium text-gray-700 py-2 px-2 hover:bg-[#1c3a13] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out hover:ml-2">
             Withdraw
           </span>
         </Link>
@@ -84,7 +84,7 @@ export default function DashboardNav() {
       <div className="m-2">
         <Link href="/dashboard/stakes" className="flex">
           <AiOutlineStock className="w-6 h-8" />
-          <span className="sm:flex hidden text-sm font-medium text-gray-700 py-2 px-2 hover:bg-[#1c3a13] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+          <span className="sm:flex hidden text-sm font-medium text-gray-700 py-2 px-2 hover:bg-[#1c3a13] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out hover:ml-2">
             My Stake
           </span>
         </Link>
@@ -92,7 +92,7 @@ export default function DashboardNav() {
       <div className="m-2">
         <Link href="/dashboard/revenues" className="flex">
           <GiProfit className="w-6 h-8" />
-          <span className="sm:flex hidden text-sm font-medium text-gray-700 py-2 px-2 hover:bg-[#1c3a13] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+          <span className="sm:flex hidden text-sm font-medium text-gray-700 py-2 px-2 hover:bg-[#1c3a13] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out hover:ml-2">
             Revenues
           </span>
         </Link>
