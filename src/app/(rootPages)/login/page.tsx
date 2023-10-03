@@ -1,4 +1,8 @@
 "use client"
+import Loader from "@/app/loader";
+import { useLoginUserMutation } from "@/redux/app/auth/authApiEndPoints";
+import { setToken } from "@/redux/app/auth/authSlice";
+import { useAppDispatch } from "@/redux/hooks";
 import Link from "next/link";
 import React, { FormEvent } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
@@ -9,6 +13,9 @@ interface IFormInput {
 }
 
 export default function Login() {
+  const [loginUser, { isError, isSuccess, isLoading, data }] =
+    useLoginUserMutation();
+  const dispatch = useAppDispatch();
   const {
     register,
     handleSubmit,
@@ -16,11 +23,22 @@ export default function Login() {
   } = useForm<IFormInput>({
     mode: "onBlur", 
   });
-  const onSubmit = (
+  const onSubmit = async (
     data:IFormInput
   )=> {
-    console.log(data);
+    try {
+      const res = await loginUser({ ...data }).unwrap();
+      dispatch(setToken(res.token));
+      console.log(res);
+    } catch (error: any) {
+      console.error(error.message);
+    }
+
   };
+  if (isLoading) {
+    return <Loader/>;
+  }
+
   return (
     <div className="pt-8 bg-[#e0dada]">
       <div className="py-6 flex flex-col justify-center sm:py-12">
@@ -69,12 +87,7 @@ export default function Login() {
                         required: {
                           value: true,
                           message: "Password is required!",
-                        },
-                        pattern: {
-                          value:
-                            /^(?=.*[a-z]{3,})(?=.*[A-Z])(?=.*\d)(?=.*[^\w\d])(.{6,})$/,
-                          message: "Password must be strong!",
-                        },
+                        }
                       })}
                       className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-green-600"
                       placeholder="Password"
@@ -90,20 +103,15 @@ export default function Login() {
                         {errors.password.message}
                       </span>
                     )}
-                    {errors.password?.type === "pattern" && (
-                      <span className="text-red-600 text-xs">
-                        {errors.password.message}
-                      </span>
-                    )}
                   </div>
-                  <div className="relative text-center">
+                  {/* <div className="relative text-center">
                     <Link
                       className="inline-block text-sm md:text-base hover:text-[#03A776] text-[#0D1519]"
                       href={"#/"}
                     >
                       Forgot Password?
                     </Link>
-                  </div>
+                  </div> */}
                   <div className="relative flex justify-center">
                     <button
                       type="submit"

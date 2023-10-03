@@ -2,6 +2,7 @@
 import Image from "next/image";
 import leftImage from "@/assets/signup.svg";
 import { SubmitHandler, useForm } from "react-hook-form";
+import Link from "next/link";
 interface IFormData {
   name: string;
   email: string;
@@ -157,7 +158,7 @@ export default function Register() {
                   )}
                 </div>
               </div>
-              upload image later
+              {/* upload image later
               <div className="mb-4">
                 <label className="flex flex-col items-center px-4 py-6 bg-white text-[#03A776] rounded-lg shadow border border-blue cursor-pointer hover:bg-blue">
                   <svg
@@ -180,7 +181,7 @@ export default function Register() {
                     Upload your profile picture.
                   </p>
                 )}
-              </div>
+              </div> */}
               <div className="mb-4">
                 <label
                   className="block mb-2 text-sm font-bold text-gray-700"
@@ -210,12 +211,12 @@ export default function Register() {
               </div>
               <hr className="mb-6 border-t" />
               <div className="text-center">
-                <a
-                  className="inline-block text-sm md:text-base text-[#0D1519] hover:text-[#03A776] align-baseline"
-                  href="/login"
-                >
-                  Already have an account? Login!
-                </a>
+                <span className="text-sm md:text-base text-[#0D1519] align-baseline">
+                  Already have an account ?
+                  <Link href="/login" className="ml-2 hover:text-[#03A776]">
+                    Login
+                  </Link>
+                </span>
               </div>
             </form>
           </div>

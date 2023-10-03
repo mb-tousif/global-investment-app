@@ -1,5 +1,4 @@
 import DashboardNav from "@/components/DashboardNav";
-import Footer from "@/components/Footer";
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   return (
