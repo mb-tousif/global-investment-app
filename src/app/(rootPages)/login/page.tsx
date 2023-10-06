@@ -6,6 +6,8 @@ import { useAppDispatch } from "@/redux/hooks";
 import Link from "next/link";
 import React, { FormEvent } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 interface IFormInput {
   email: string;
@@ -16,6 +18,7 @@ export default function Login() {
   const [loginUser, { isError, isSuccess, isLoading, data }] =
     useLoginUserMutation();
   const dispatch = useAppDispatch();
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -29,7 +32,6 @@ export default function Login() {
     try {
       const res = await loginUser({ ...data }).unwrap();
       dispatch(setToken(res.token));
-      console.log(res);
     } catch (error: any) {
       console.error(error.message);
     }
@@ -37,6 +39,9 @@ export default function Login() {
   };
   if (isLoading) {
     return <Loader/>;
+  }
+  if (isSuccess) {
+    router.push("/dashboard");
   }
 
   return (

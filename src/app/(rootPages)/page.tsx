@@ -1,4 +1,5 @@
 import CountDown from "@/components/CountDown";
+import Link from "next/link";
 import React from "react";
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
             <h1 className="text-4xl font-semibold text-white mb-8 ">Crypto Trade Ltd</h1>
             <p className="text-white">One of the Best trading platform by investing your money with possible return.</p>
             <div className="btnContainer mt-10  w-[150px] text-center py-3 text-white bg-[#03A776] ">
-              <button> Read Bank</button>
+              <Link href="/dashboard">Invest Money</Link>
             </div>
           </div>
         </div>
