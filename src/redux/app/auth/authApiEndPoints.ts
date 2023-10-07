@@ -8,6 +8,7 @@ const authApi = api.injectEndpoints({
         headers: {
           "Content-type": "application/json; charset=UTF-8",
         },
+        invalidatesTags: "Users",
       }),
     }),
     getUserById: builder.query({
@@ -16,6 +17,7 @@ const authApi = api.injectEndpoints({
         headers: {
           "Content-type": "application/json; charset=UTF-8",
         },
+        invalidatesTags: "Users",
       }),
     }),
     registerUser: builder.mutation({
@@ -26,6 +28,7 @@ const authApi = api.injectEndpoints({
         },
         method: "POST",
         body: data,
+        providesTags: ["users"],
       }),
     }),
     loginUser: builder.mutation({
@@ -36,16 +39,18 @@ const authApi = api.injectEndpoints({
         },
         method: "POST",
         body: data,
+        providesTags: ["users"],
       }),
     }),
     updateUser: builder.mutation({
       query: (id) => ({
         url: `/users/update/${id}`,
         headers: {
-            "Content-type": "application/json; charset=UTF-8",
+          "Content-type": "application/json; charset=UTF-8",
         },
         method: "PATCH",
         body: id,
+        invalidatesTags: "Users",
       }),
     }),
   }),
