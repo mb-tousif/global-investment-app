@@ -1,4 +1,6 @@
 "use client"
+import { removeToken } from "@/redux/app/auth/authSlice";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import Link from "next/link";
 import React, { useState } from "react";
 import { GiReceiveMoney, GiPayMoney } from "react-icons/gi";
@@ -31,9 +33,11 @@ const routes = [
 ];
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const [token, setToken] = useState(false);
+  const {token} = useAppSelector((state) => state.auth);
+  const dispatch = useAppDispatch();
+
   const handleAuth = () => {
-    setToken(!token);
+    dispatch( removeToken())
   };
   return (
     <nav className="bg-[#071948] w-full text-[#fff] relative z-10">

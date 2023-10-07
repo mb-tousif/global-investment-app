@@ -7,7 +7,6 @@ import Link from "next/link";
 import React, { FormEvent } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useRouter } from "next/navigation";
-import toast from "react-hot-toast";
 
 interface IFormInput {
   email: string;
