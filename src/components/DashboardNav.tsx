@@ -53,7 +53,7 @@ export default function DashboardNav() {
         <Link href="/dashboard/wallet" className="flex">
           <ImProfile className="w-6 h-8" />
           <span className="sm:flex hidden text-sm font-medium text-gray-700 py-2 px-2 hover:bg-[#1c3a13] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out hover:ml-2">
-            My Account
+            My Wallet
           </span>
         </Link>
       </div>

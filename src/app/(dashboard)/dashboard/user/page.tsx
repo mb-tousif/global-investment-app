@@ -1,7 +1,13 @@
+import ProfileCard from '@/components/ProfileCard';
 import React from 'react'
 
 export default function User() {
   return (
-    <div className='text-center text-3xl'>My Profile</div>
-  )
+    <>
+      <h1 className="text-center mx-auto text-3xl">My Profile</h1>
+      <div className="flex justify-center">
+        <ProfileCard />
+      </div>
+    </>
+  );
 }

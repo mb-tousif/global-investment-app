@@ -1,5 +1,5 @@
 "use client";
-import Table from "@/components/Table";
+import Statistics from "@/components/Statistics";
 import { useAppSelector } from "@/redux/hooks";
 import { useRouter } from "next/navigation";
 import React, { useEffect } from "react";
@@ -15,7 +15,7 @@ export default function Dashboard() {
   return (
     <div className="overflow-scroll min-h-full">
       <h1 className="text-center">Dashboard Home</h1>
-      <Table />
+      <Statistics />
     </div>
   );
 }

@@ -21,12 +21,12 @@ const routes = [
     link: "/blogs",
   },
   {
-    id: 5,
+    id: 4,
     name: "Dashboard",
     link: "/dashboard",
   },
   {
-    id: 4,
+    id: 5,
     name: "Sign up",
     link: "/register",
   },
