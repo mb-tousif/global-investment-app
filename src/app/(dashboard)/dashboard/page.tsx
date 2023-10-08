@@ -9,7 +9,7 @@ export default function Dashboard() {
   const {token} = useAppSelector((state) => state.auth);
   useEffect(() => {
     if (!token) {
-      router.push("/");
+      router.push("/login");
     }
   }, [token, router]);
   return (

@@ -4,9 +4,9 @@ import { useLoginUserMutation } from "@/redux/app/auth/authApiEndPoints";
 import { setToken } from "@/redux/app/auth/authSlice";
 import { useAppDispatch } from "@/redux/hooks";
 import Link from "next/link";
-import React, { FormEvent } from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 interface IFormInput {
   email: string;
@@ -31,16 +31,16 @@ export default function Login() {
     try {
       const res = await loginUser({ ...data }).unwrap();
       dispatch(setToken(res.token));
+      router.push("/dashboard");
     } catch (error: any) {
       console.error(error.message);
     }
-
   };
   if (isLoading) {
     return <Loader/>;
   }
-  if (isSuccess) {
-    router.push("/dashboard");
+  if ( isSuccess) {
+    return toast.success(`${data?.message}`);
   }
 
   return (

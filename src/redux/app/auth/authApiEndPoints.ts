@@ -28,7 +28,7 @@ const authApi = api.injectEndpoints({
         },
         method: "POST",
         body: data,
-        providesTags: ["users"],
+        providesTags: ["Users"],
       }),
     }),
     loginUser: builder.mutation({
@@ -39,7 +39,7 @@ const authApi = api.injectEndpoints({
         },
         method: "POST",
         body: data,
-        providesTags: ["users"],
+        providesTags: ["Users"],
       }),
     }),
     updateUser: builder.mutation({
