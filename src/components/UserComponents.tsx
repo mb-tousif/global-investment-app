@@ -1,13 +1,13 @@
 // "use client"
+import Loader from '@/app/loader';
 import { useGetAllUsersQuery } from '@/redux/app/auth/authApiEndPoints';
 import Image from 'next/image'
 import Link from 'next/link'
-import LoadingSpinner from './LoadingSpinner';
 
 export default function UserComponents() {
   const{ isError, isLoading, data} = useGetAllUsersQuery(undefined);  
   if (isLoading) {
-    return <LoadingSpinner/>;
+    return <Loader/>;
   }
   if (isError) {
     return <div>{isError}</div>;
@@ -24,18 +24,18 @@ export default function UserComponents() {
           <Link
             href={`/dashboard/user/${user.id}`}
             key={user.id}
-            className="flex flex-col items-center justify-center text-gray-800 hover:text-blue-600"
+            className="flex flex-col items-center justify-center text-indigo-900"
             title="View Profile"
           >
             <Image
               alt="User"
               src={user.img}
-              className="w-16 rounded-full"
+              className="w-20 rounded-full shadow-lg"
               width={500}
               height={500}
             />
             <p className="text-center font-bold text-sm mt-1">{user.name}</p>
-            <p className="text-xs text-gray-500 text-center">{user.role}</p>
+            <p className="text-xs text-green-800 text-center">{user.role}</p>
           </Link>
         ))}
       </div>

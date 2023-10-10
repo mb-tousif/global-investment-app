@@ -1,17 +1,15 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Fragment } from "react";
-
 export default function RootPageLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <Fragment>
+    <div className="bg-gradient-to-r from-slate-300 to-slate-500">
       <Navbar />
       <div>{children}</div>
       <Footer />
-    </Fragment>
+    </div>
   );
 }

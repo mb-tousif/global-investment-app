@@ -9,6 +9,7 @@ const nextConfig = {
       "vojislavd.com",
       "www.w3.org",
       "raw.githubusercontent.com",
+      "img.freepik.com",
     ],
   },
 };

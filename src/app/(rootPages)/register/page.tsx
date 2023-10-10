@@ -27,7 +27,7 @@ export default function Register() {
 
 
   return (
-    <div className="pt-8 pb-6 mx-auto bg-[#e0dada]">
+    <div className="pt-8 pb-6 mx-auto">
       <div className="flex justify-center px-6">
         <div className="w-full xl:w-3/4 lg:w-11/12 flex">
           <div className="w-full h-auto bg-gray-400 hidden lg:block lg:w-5/12 bg-cover rounded-l-lg">

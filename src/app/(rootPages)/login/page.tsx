@@ -44,7 +44,7 @@ export default function Login() {
   }
 
   return (
-    <div className="pt-8 bg-[#e0dada]">
+    <div className="pt-8">
       <div className="py-6 flex flex-col justify-center sm:py-12">
         <div className="relative py-3 sm:max-w-xl sm:mx-auto">
           <div className="absolute inset-0 bg-gradient-to-r from-[#03A776] to-[#0D1519] shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
