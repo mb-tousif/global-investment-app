@@ -1,4 +1,5 @@
 import CountDown from "@/components/CountDown";
+import Subscribe from "@/components/Subscribe";
 import Link from "next/link";
 import React from "react";
 
@@ -17,6 +18,7 @@ export default function Home() {
         </div>
       <CountDown />
       </div>
+      <Subscribe />
     </section>
   );
 }

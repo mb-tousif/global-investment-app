@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Statistics() {
   return (
-    <div className="flex-1 bg-white rounded-lg shadow-xl mt-4 p-8">
+    <div className="flex-1 bg-white rounded-lg shadow-xl md:m-4 p-8">
       <h4 className="text-xl text-gray-900 font-bold">Statistics</h4>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-4">
         <div className="px-6 py-6 bg-gray-100 border border-gray-300 rounded-lg shadow-xl">

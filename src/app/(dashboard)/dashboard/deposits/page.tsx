@@ -5,7 +5,7 @@ export default function Deposits() {
   return (
     <div className="mx-auto my-auto">
       <div className="font-manrope flex h-screen w-full items-center justify-center">
-        <div className="mx-auto box-border xs:w-[300px] sm:w-[365px] border bg-white p-4">
+        <div className="mx-auto box-border xs:w-[300px] sm:w-[365px] border bg-gradient-to-r from-neutral-300 to-stone-400 p-4">
           <div className="flex items-center justify-between">
             <span className="text-[#64748B]">Sending Money</span>
             <div className="cursor-pointer border rounded-[4px]">
