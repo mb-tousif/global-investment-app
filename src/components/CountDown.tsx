@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 
-const CountDown = () => {
+export default function CountDown () {
   let difference = +new Date(`12/10/2023`) - +new Date();
   const [delay, setDelay] = useState(difference);
 
@@ -23,7 +23,7 @@ const CountDown = () => {
       clearInterval(timer);
     };
   });
-  
+
   return (
     <div className="flex align-middle justify-center">
       <span className="font-bold text-5xl text-[#03A776]">
@@ -32,5 +32,3 @@ const CountDown = () => {
     </div>
   );
 };
-
-export default CountDown;
