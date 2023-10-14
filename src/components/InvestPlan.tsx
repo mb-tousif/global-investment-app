@@ -55,7 +55,7 @@ export default function InvestPlan() {
             </label>
           </div>
           <div className="w-full p-4 md:w-1/2 lg:w-1/4 plan-card">
-            <label className="flex flex-col rounded-lg shadow-lg group card-group relative hover:bg-jblue-secondary cursor-pointer hover:shadow-2xl">
+            <label className="flex flex-col rounded-lg shadow-lg group card-group relative cursor-pointer hover:shadow-2xl">
               <div className="w-full px-4 py-6 rounded-t-lg card-section-1">
                 <h3 className="mx-auto text-base font-semibold text-center underline text-[#03A776] group-hover:text-white">
                   Elite
