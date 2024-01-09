@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export default function UserComponents() {
-  const{ isError, isLoading, data} = useGetAllUsersQuery(undefined);  
+  const{ isError, isLoading, data} = useGetAllUsersQuery({page:2});  
   if (isLoading) {
     return <Loader/>;
   }
@@ -20,7 +20,7 @@ export default function UserComponents() {
         Our All Member and Stakers {data?.data?.length}
       </h1>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 mt-8">
-        {data?.data?.map((user: any) => (
+        {data?.data?.data?.map((user: any) => (
           <Link
             href={`/dashboard/user/${user.id}`}
             key={user.id}
@@ -34,7 +34,7 @@ export default function UserComponents() {
               width={500}
               height={500}
             />
-            <p className="text-center font-bold text-sm mt-1">{user.name}</p>
+            <p className="text-center font-bold text-sm mt-1">{user.name.firstName}</p>
             <p className="text-xs text-green-800 text-center">{user.role}</p>
           </Link>
         ))}

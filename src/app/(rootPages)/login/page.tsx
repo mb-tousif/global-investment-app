@@ -30,7 +30,8 @@ export default function Login() {
   )=> {
     try {
       const res = await loginUser({ ...data }).unwrap();
-      dispatch(setToken(res.token));
+      console.log(res, "res");
+      dispatch(setToken(res?.data?.accessToken));
       router.push("/dashboard");
     } catch (error: any) {
       console.error(error.message);
