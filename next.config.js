@@ -6,6 +6,7 @@ const nextConfig = {
       "images.unsplash.com",
       "w3.org",
       "picsum.photos",
+      "unsplash.com",
       "raw.githubusercontent.com",
       "avatars0.githubusercontent.com",
       "img.freepik.com",

@@ -11,6 +11,47 @@
   font-family: 'Roboto Condensed', sans-serif;
 }
 
+@keyframes rotateAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes infiniteRotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-rotation {
+  animation: infiniteRotation 3s linear infinite;
+}
+
+.visible {
+  animation: rotateAnimation 3s linear infinite;
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+}
+
 /* ::-webkit-scrollbar {
   width: 3vh;
 }

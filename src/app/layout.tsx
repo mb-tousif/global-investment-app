@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import RootProvider from "@/lib/provider";
 
 export const metadata: Metadata = {
-  title: "Crypto Trade Ltd",
-  description: "Crypto Trade Ltd",
+  title: "Investment Bank of Bangladesh Ltd",
+  description: "Investment Bank of Bangladesh Ltd",
   icons: "/favicon.png",
 };
 
