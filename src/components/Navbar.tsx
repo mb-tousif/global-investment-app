@@ -15,18 +15,18 @@ export default function Header() {
   };
   
   return (
-    <nav className="bg-[#071948] w-full text-[#fff] relative z-10">
+    <nav className="bg-[#071948] w-full text-[#fff] relative z-20">
       <div className="flex items-center justify-between h-16">
         <div className="flex flex-auto">
           <div className="hidden mx-auto my-auto md:block">
             <div className="flex justify-end -mr-2 items-baseline">
-              {navBarRoutes.map((route) => (
+              {navBarRoutes?.map((route) => (
                 <Link
-                  key={route.id}
-                  href={route.link}
-                  className="px-3 py-2 justify-end rounded-md text-base md:text-lg font-medium"
+                  key={route?.id}
+                  href={route?.link}
+                  className="px-3 py-2 text-gray-50 justify-end rounded-md text-base md:text-lg font-medium"
                 >
-                  {route.name}
+                  {route?.name}
                 </Link>
               ))}
               {token ? (
@@ -61,16 +61,16 @@ export default function Header() {
       <div
         className={`${
           open ? "block" : "hidden"
-        } absolute z-20 bg-[#232274f9] w-full md:hidden opacity-90`}
+        } absolute z-20 bg-[#071948] w-full md:hidden opacity-90`}
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 translate ease-in-out duration-300">
-          {navBarRoutes.map((route) => (
+          {navBarRoutes?.map((route) => (
             <Link
-              key={route.id}
-              href={route.link}
+              key={route?.id}
+              href={route?.link}
               className="block px-3 py-2 rounded-md text-base font-medium"
             >
-              {route.name}
+              {route?.name}
             </Link>
           ))}
           {token ? (

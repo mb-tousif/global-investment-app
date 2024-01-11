@@ -120,7 +120,7 @@ export default function Register() {
                       },
                     })}
                     type="password"
-                    placeholder="******************"
+                    placeholder="***************"
                   />
                   {errors.password?.type === "required" && (
                     <p className="text-rose-600 text-center text-sm">
@@ -158,7 +158,7 @@ export default function Register() {
                   )}
                 </div>
               </div>
-              {/* upload image later
+              upload image later
               <div className="mb-4">
                 <label className="flex flex-col items-center px-4 py-6 bg-white text-[#03A776] rounded-lg shadow border border-blue cursor-pointer hover:bg-blue">
                   <svg
@@ -181,7 +181,7 @@ export default function Register() {
                     Upload your profile picture.
                   </p>
                 )}
-              </div> */}
+              </div>
               <div className="mb-4">
                 <label
                   className="block mb-2 text-sm font-bold text-gray-700"

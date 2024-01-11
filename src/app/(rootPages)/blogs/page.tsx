@@ -1,5 +1,8 @@
+import ComingSoon from "@/components/ComingSoon";
 import React from "react";
 
 export default function Blogs() {
-  return <div className="text-3xl text-center min-h-70vh">Blogs</div>;
+  return <div>
+    <ComingSoon />
+  </div>;
 }

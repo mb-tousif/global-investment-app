@@ -49,7 +49,7 @@ export default function HeroSection() {
                         ))}
                       </span>
                     </button>
-                    Thrive with IBBL. <br />
+                    Thrive with IBBL.<br />
                     Pioneering Progress in Bangladesh&apos;s Financial Horizon.
                   </p>
                 </div>
