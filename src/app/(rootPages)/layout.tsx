@@ -8,7 +8,7 @@ export default function RootPageLayout({
   return (
     <div className="bg-gradient-to-r from-slate-300 to-slate-500">
       <Navbar />
-      <div>{children}</div>
+      {children}
       <Footer />
     </div>
   );
