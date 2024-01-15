@@ -9,16 +9,16 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   
   return (
-    <section className="bg-[#071948] w-full">
+         <section className="bg-[#071948] text-gray-50 w-full">
       <div className="flex items-center justify-between h-16">
         <div className="flex flex-auto">
-          <div className="hidden mx-auto my-auto md:block">
+          <div className="hidden mx-auto my-auto sm:block">
             <div className="flex justify-end -mr-2 items-baseline">
               {navBarRoutes?.map((route) => (
                 <Link
                   key={route?.id}
                   href={route?.link}
-                  className="px-3 py-2 text-gray-50 justify-end rounded-md text-base md:text-lg font-medium"
+                  className="px-3 py-2 justify-end rounded-md text-base md:text-lg font-medium"
                 >
                   {route?.name}
                 </Link>
