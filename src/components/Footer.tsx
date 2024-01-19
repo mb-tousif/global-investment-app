@@ -1,3 +1,5 @@
+import { RiBankFill } from "react-icons/ri";
+
 const footerStyle: React.CSSProperties = {
   padding: "1rem",
   textAlign: "center",
@@ -13,12 +15,14 @@ export default function Footer() {
     >
       <div className="container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
         <div className="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
+          <p className="text-2xl font-bold text-center">IBBL</p>
+          <RiBankFill className="w-12 h-12 mx-auto text-gray-50" />
           <p className="mt-2 text-sm text-gray-50">
             All right reserved & Copyright &#169; {new Date().getFullYear()}.
           </p>
           <div className="mt-4">
-            <span className="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">
-              <a className="text-gray-50 cursor-pointer hover:text-gray-5000">
+            <div className="flex justify-center mt-2 ml-auto sm:mt-0">
+              <a className="text-gray-50 cursor-pointer hover:text-gray-500">
                 <svg
                   fill="currentColor"
                   strokeLinecap="round"
@@ -30,7 +34,7 @@ export default function Footer() {
                   <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
                 </svg>
               </a>
-              <a className="ml-3 text-gray-50 cursor-pointer hover:text-gray-5000">
+              <a className="ml-3 text-gray-50 cursor-pointer hover:text-gray-500">
                 <svg
                   fill="currentColor"
                   strokeLinecap="round"
@@ -42,7 +46,7 @@ export default function Footer() {
                   <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
                 </svg>
               </a>
-              <a className="ml-3 text-gray-50 cursor-pointer hover:text-gray-5000">
+              <a className="ml-3 text-gray-50 cursor-pointer hover:text-gray-500">
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -56,7 +60,7 @@ export default function Footer() {
                   <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
                 </svg>
               </a>
-              <a className="ml-3 text-gray-50 cursor-pointer hover:text-gray-5000">
+              <a className="ml-3 text-gray-50 cursor-pointer hover:text-gray-500">
                 <svg
                   fill="currentColor"
                   stroke="currentColor"
@@ -73,7 +77,7 @@ export default function Footer() {
                   <circle cx="4" cy="4" r="2" stroke="none"></circle>
                 </svg>
               </a>
-            </span>
+            </div>
           </div>
         </div>
         <div className="flex flex-wrap flex-grow mt-10 -mb-10 text-center md:pl-20 md:mt-0 md:text-left">

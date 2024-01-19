@@ -1,15 +1,16 @@
 "use client";
-import { navBarRoutes } from "@/constants/routeConstants";
-import Link from "next/link";
 import React, { useState } from "react";
+import Link from "next/link";
 import { GiReceiveMoney, GiPayMoney } from "react-icons/gi";
 import { AuthState } from "./AuthState";
+import { RiBankFill } from "react-icons/ri";
+import { navBarRoutes } from "@/constants/routeConstants";
 
-export default function Header() {
+export default function Navbar() {
   const [open, setOpen] = useState(false);
-  
+
   return (
-         <section className="bg-[#071948] text-gray-50 w-full">
+    <section className="bg-[#071948] text-gray-50 w-full">
       <div className="flex items-center justify-between h-16">
         <div className="flex flex-auto">
           <div className="hidden mx-auto my-auto sm:block">
@@ -18,7 +19,7 @@ export default function Header() {
                 <Link
                   key={route?.id}
                   href={route?.link}
-                  className="px-3 py-2 justify-end rounded-md text-base md:text-lg font-medium"
+                  className="px-3 py-2 text-gray-50 justify-end rounded-md text-base md:text-lg font-medium hover:bg-slate-700"
                 >
                   {route?.name}
                 </Link>
@@ -26,17 +27,20 @@ export default function Header() {
               <AuthState />
             </div>
           </div>
-          <div
-            className="sm:hidden flex text-gray-50"
-            onClick={() => setOpen(!open)}
-          >
-            <div className="flex justify-items-end">
+          <div className="sm:hidden flex justify-evenly text-gray-50">
+            <div
+              className="flex justify-items-end"
+              onClick={() => setOpen(!open)}
+            >
               {open ? (
                 <GiReceiveMoney className="ml-4 w-8 h-8" />
               ) : (
                 <GiPayMoney className="ml-4 w-8 h-8" />
               )}
             </div>
+            <p className="text-2xl flex ml-2 justify-end min-w-[250px] font-bold text-end">
+              IBBL
+            </p>
           </div>
         </div>
       </div>
@@ -50,7 +54,7 @@ export default function Header() {
             <Link
               key={route?.id}
               href={route?.link}
-              className="block px-3 py-2 rounded-md text-base font-medium"
+              className="block px-3 py-2 hover:bg-slate-700 rounded-md text-base font-medium"
             >
               {route?.name}
             </Link>
