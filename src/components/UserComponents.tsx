@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export default function UserComponents() {
-  const{ isError, isLoading, data} = useGetAllUsersQuery({page:2});  
+  const { isError, isLoading, data} = useGetAllUsersQuery({page:2});  
   if (isLoading) {
     return <Loader/>;
   }

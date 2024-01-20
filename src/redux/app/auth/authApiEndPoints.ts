@@ -3,11 +3,12 @@ import { api } from "@/redux/api";
 const authApi = api.injectEndpoints({
   endpoints: (builder) => ({
     getAllUsers: builder.query({
-      query: () => ({
-        url: "/users/all-users",
+      query: (arg:Record<string, any>) => ({
         headers: {
           "Content-type": "application/json; charset=UTF-8",
         },
+        url: "/users/all-users",
+        params: arg,
         invalidatesTags: "Users",
       }),
     }),

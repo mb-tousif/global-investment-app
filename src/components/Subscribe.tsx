@@ -9,8 +9,11 @@ export default function Subscribe() {
             <h2 className="text-gray-700 text-2xl font-bold md:text-gray-100">
               Sign Up For The Best Return
             </h2>
-            <p className="mt-2 text-gray-600 md:text-gray-400">
-              Crypto Trade Corp. is the best platform for your financial growth.
+            <p className="mt-2 text-justify text-gray-600 md:text-gray-400">
+              Investment Bank of Bangladesh Limited (IBBL) is a leading
+              investment bank in Bangladesh. We provide a wide range of
+              financial services that cater to the needs of individuals and
+              institutions.
             </p>
           </div>
         </div>
