@@ -29,7 +29,7 @@ export const AuthState = () => {
         </Link>
       ) : (
         <Link
-          href="/login"
+          href="/auth/login"
           className="px-3 underline-none py-2 justify-end rounded-md text-base md:text-lg font-medium"
         >
           Log in
