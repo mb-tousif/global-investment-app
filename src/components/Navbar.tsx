@@ -13,7 +13,7 @@ export default function Navbar() {
     <section className="bg-[#071948] text-gray-50 w-full">
       <div className="flex items-center justify-between h-16">
         <div className="flex flex-auto">
-          <div className="hidden mx-auto my-auto sm:block">
+          <div className="mx-auto my-auto hidden sm:block">
             <div className="flex justify-end -mr-2 items-baseline">
               {navBarRoutes?.map((route) => (
                 <Link

@@ -1,4 +1,4 @@
-import { BiSolidDashboard } from "react-icons/bi";
+"use strict";
 import { MdAdminPanelSettings, MdOutlineGetApp } from "react-icons/md";
 import { ImProfile } from "react-icons/im";
 import { RiAccountBoxFill } from "react-icons/ri";
@@ -7,18 +7,20 @@ import { TbTransferOut } from "react-icons/tb";
 import { IoMdLogOut } from "react-icons/io";
 import { ENUM_USER_ROLES, TUserRole } from "./common";
 import { jwtDecode } from "jwt-decode";
-import { useAppSelector } from "@/redux/hooks";
+import { getToken } from "@/redux/app/auth/authSlice";
 
-const token  = localStorage.getItem("token") || "";
-const userCredentials:{
-  id: string;
-  role: TUserRole;
-  iat: number;
-  exp: number;
-} = jwtDecode(token);
-
-const role = userCredentials?.role;
- export const navBarRoutes = [
+let role: TUserRole = ENUM_USER_ROLES.USER;
+const token  = getToken();
+if (token) {
+  const userCredentials: {
+    id: string;
+    role: TUserRole;
+    iat: number;
+    exp: number;
+  } = jwtDecode(token as string);
+ role = userCredentials?.role;
+}
+export const navBarRoutes = [
    {
      id: 1,
      name: "Home",
@@ -37,7 +39,7 @@ const role = userCredentials?.role;
    {
      id: 4,
      name: "Dashboard",
-     link: `/dashboard/${role}`,
+    link: `/dashboard/${role}`,
    },
    {
      id: 5,

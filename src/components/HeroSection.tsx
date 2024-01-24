@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 export default function HeroSection() {
   const keyPhrases = ["Confidence,", "AnyTime,", "AnyWhere,"];
@@ -31,7 +32,7 @@ export default function HeroSection() {
                   <h1 className="text-gray-50 font-semibold text-3xl lg:text-6xl sm:text-4xl md:text-5xl">
                     Welcome to IBBL
                   </h1>
-                  <p className="mt-4 pt-6 text-xl font-medium text-gray-50">
+                  <p className="mt-4 pt-6 text-xl font-bold text-gray-50">
                     Invest with
                     <button className="w-28">
                       <span className="animate-rotation text-[#03A776]">

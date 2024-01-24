@@ -1,7 +1,7 @@
 import { RootState } from "@/redux/store";
 
-const getToken = (state: RootState) => {
+const getAccessToken = (state: RootState) => {
     return state.auth.token;
   };
   
-  export default getToken;
+  export default getAccessToken;
