@@ -33,7 +33,7 @@ export default function HeroSection() {
                     Welcome to IBBL
                   </h1>
                   <p className="mt-4 pt-6 text-xl font-bold text-gray-50">
-                    Invest with
+                    Invest with 
                     <button className="w-28">
                       <span className="animate-rotation text-[#03A776]">
                         {keyPhrases.map((phrase, index) => (

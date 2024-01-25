@@ -6,7 +6,7 @@ import { useAppDispatch } from "@/redux/hooks";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
-import { toast } from "react-toastify";
+import toast from "react-hot-toast";
 
 interface IFormInput {
   email: string;
@@ -30,11 +30,11 @@ export default function Login() {
   )=> {
     try {
       const res = await loginUser({ ...data }).unwrap();
-      console.log(res, "res");
       dispatch(setToken(res?.data?.accessToken));
       router.push("/dashboard");
+      toast.success(`${res?.message}`);
     } catch (error: any) {
-      console.error(error.message);
+      toast.error(error?.data?.message);
     }
   };
   if (isLoading) {
@@ -109,14 +109,14 @@ export default function Login() {
                       </span>
                     )}
                   </div>
-                  {/* <div className="relative text-center">
+                  <div className="relative text-center">
                     <Link
                       className="inline-block text-sm md:text-base hover:text-[#03A776] text-[#0D1519]"
-                      href={"#/"}
+                      href="/auth/forget-password"
                     >
                       Forgot Password?
                     </Link>
-                  </div> */}
+                  </div>
                   <div className="relative flex justify-center">
                     <button
                       type="submit"

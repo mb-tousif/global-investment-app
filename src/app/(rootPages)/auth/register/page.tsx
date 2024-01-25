@@ -213,7 +213,7 @@ export default function Register() {
               <div className="text-center">
                 <span className="text-sm md:text-base text-[#0D1519] align-baseline">
                   Already have an account ?
-                  <Link href="/login" className="ml-2 hover:text-[#03A776]">
+                  <Link href="/auth/login" className="ml-2 hover:text-[#03A776]">
                     Login
                   </Link>
                 </span>
