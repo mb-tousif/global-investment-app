@@ -25,7 +25,7 @@ export default function Message() {
           </div>
         </div>
         <h3 className="my-4 text-center text-3xl font-semibold text-gray-700">
-          Congratuation!!!
+          Congratulations!!!
         </h3>
         <p className="w-[230px] text-center font-normal text-gray-600">
           Your order have been taken and is being attended to

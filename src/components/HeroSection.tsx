@@ -1,9 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import toast from "react-hot-toast";
 
 export default function HeroSection() {
-  const keyPhrases = ["Confidence,", "AnyTime,", "AnyWhere,"];
+  const keyPhrases = [" Confidence,", "AnyTime,", "AnyWhere,"];
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
 
   useEffect(() => {
@@ -33,8 +32,8 @@ export default function HeroSection() {
                     Welcome to IBBL
                   </h1>
                   <p className="mt-4 pt-6 text-xl font-bold text-gray-50">
-                    Invest with 
-                    <button className="w-28">
+                    Invest with
+                    <button className="w-28 ml-1 mr-1">
                       <span className="animate-rotation text-[#03A776]">
                         {keyPhrases.map((phrase, index) => (
                           <span

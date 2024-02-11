@@ -13,7 +13,7 @@ export default function Navbar() {
       <div className="flex items-center justify-between h-16">
         <div className="flex flex-auto">
           <div className="mx-auto my-auto">
-            <div className="opacity-0 md:opacity-100 md:flex justify-end -mr-2 text-gray-50 items-baseline ">
+            <div className="opacity-0 sm:opacity-100 sm:flex justify-end -mr-2 text-gray-50 items-baseline ">
               {navBarRoutes?.map((route) => (
                 <Link
                   key={route?.id}
@@ -32,9 +32,9 @@ export default function Navbar() {
               onClick={() => setOpen(!open)}
             >
               {open ? (
-                <GiReceiveMoney className="ml-4 w-8 h-8" />
+                <GiReceiveMoney className="w-8 h-8 mr-4" />
               ) : (
-                <GiPayMoney className="ml-4 w-8 h-8" />
+                <GiPayMoney className="w-8 h-8 mr-4" />
               )}
             </div>
           </div>

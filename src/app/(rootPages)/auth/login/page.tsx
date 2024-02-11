@@ -46,8 +46,8 @@ export default function Login() {
   }
 
   return (
-    <div className="min-h-[500px] overflow-hidden flex items-center justify-center">
-      <div className="bg-white lg:w-5/12 md:6/12 w-10/12 shadow-3xl">
+    <div className="min-h-[500px] overflow-hidden flex items-center md:mt-16 justify-center">
+      <div className="bg-white lg:w-5/12 md:6/12 w-10/12 shadow-3xl rounded-3xl">
         <div className="bg-gray-800 absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full p-4 md:p-8">
           <RiBankFill className="w-12 h-12 mx-auto text-gray-50" />
         </div>
@@ -111,4 +111,3 @@ export default function Login() {
     </div>
   );
 }
-
