@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { GiReceiveMoney, GiPayMoney } from "react-icons/gi";
 import { AuthState } from "./AuthState";
-import { RiBankFill } from "react-icons/ri";
 import { navBarRoutes } from "@/constants/routeConstants";
 
 export default function Navbar() {
@@ -14,7 +13,7 @@ export default function Navbar() {
       <div className="flex items-center justify-between h-16">
         <div className="flex flex-auto">
           <div className="mx-auto my-auto">
-            <div className="hidden sm:flex md:flex lg:flex justify-end -mr-2 text-gray-50 items-baseline">
+            <div className="opacity-0 md:opacity-100 md:flex justify-end -mr-2 text-gray-50 items-baseline ">
               {navBarRoutes?.map((route) => (
                 <Link
                   key={route?.id}
@@ -38,9 +37,6 @@ export default function Navbar() {
                 <GiPayMoney className="ml-4 w-8 h-8" />
               )}
             </div>
-            <p className="text-2xl flex ml-2 justify-end min-w-[250px] font-bold text-end">
-              IBBL
-            </p>
           </div>
         </div>
       </div>
@@ -52,6 +48,7 @@ export default function Navbar() {
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 translate ease-in-out duration-300">
           {navBarRoutes?.map((route) => (
             <Link
+              onClick={() => setOpen(false)}
               key={route?.id}
               href={route?.link}
               className="block px-3 py-2 hover:bg-slate-700 rounded-md text-base font-medium"
