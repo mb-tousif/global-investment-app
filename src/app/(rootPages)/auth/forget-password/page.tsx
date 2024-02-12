@@ -50,7 +50,7 @@ export default function ForgetPassword() {
                 </div>
                 <button
                   type="submit"
-                  className="py-3 px-4 inline-flex justify-center items-center gap-2 border border-transparent font-semibold bg-gradient-to-r from-[#03A776] to-[#0D1519] rounded-md shadow-lg text-white focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800"
+                  className="py-3 px-4 inline-flex justify-center items-center gap-2 border border-transparent font-semibold bg-gradient-to-r from-[#03A776] to-[#0D1519] rounded-md shadow-lg text-white transition-all text-sm"
                 >
                   Reset password
                 </button>

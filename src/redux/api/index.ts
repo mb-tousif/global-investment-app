@@ -14,6 +14,7 @@ export const api = createApi({
   ],
   baseQuery: fetchBaseQuery({
     baseUrl: "https://ibbl-backend.vercel.app/api/v1",
+    // baseUrl: "https://localhost:5000/api/v1",
     prepareHeaders: (headers, { getState }) => {
       const state = getState() as RootState;
       const accessToken = getAccessToken(state);

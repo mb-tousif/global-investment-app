@@ -1,6 +1,11 @@
 import Link from "next/link";
 import React from "react";
 
+interface IFormInput {
+  email: string;
+  password: string;
+}
+
 export default function ResetPassword() {
   return (
     <div className="max-w-lg mx-auto my-10 bg-white p-8 rounded-xl shadow shadow-slate-300">
