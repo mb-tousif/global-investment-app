@@ -43,7 +43,7 @@ export default function Navbar() {
       <div
         className={`${
           open ? "block" : "hidden"
-        } absolute z-20 bg-[#071948] sm:hidden text-gray-50 opacity-90`}
+        } absolute z-20 bg-[#071948] w-full sm:hidden text-gray-50 opacity-90`}
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 translate ease-in-out duration-300">
           {navBarRoutes?.map((route) => (

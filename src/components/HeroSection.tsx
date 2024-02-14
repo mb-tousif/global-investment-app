@@ -1,5 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { FaAward, FaFingerprint } from "react-icons/fa6";
+import { MdVerifiedUser } from "react-icons/md";
 
 export default function HeroSection() {
   const keyPhrases = [" Confidence,", "AnyTime,", "AnyWhere,"];
@@ -65,7 +67,7 @@ export default function HeroSection() {
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
-                      <i className="fas fa-award"></i>
+                      <FaAward className="w-10 h-10" />
                     </div>
                     <h6 className="text-xl font-semibold">Awarded Agency</h6>
                     <p className="mt-2 mb-4 text-blueGray-500">
@@ -78,10 +80,10 @@ export default function HeroSection() {
               <div className="w-full px-4 text-center">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
-                    <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-400">
-                      <i className="fas fa-retweet"></i>
+                    <div className="bg-gray-800 text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-400">
+                      <MdVerifiedUser className="w-10 h-10" />
                     </div>
-                    <h6 className="text-xl font-semibold">Free Revisions</h6>
+                    <h6 className="text-xl font-semibold">Trusted</h6>
                     <p className="mt-2 mb-4 text-blueGray-500">
                       Keep you user engaged by providing meaningful information.
                       Remember that by this time, the user is curious.
@@ -93,7 +95,7 @@ export default function HeroSection() {
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
-                      <i className="fas fa-fingerprint"></i>
+                      <FaFingerprint className="w-10 h-10" />
                     </div>
                     <h6 className="text-xl font-semibold">Verified Company</h6>
                     <p className="mt-2 mb-4 text-blueGray-500">

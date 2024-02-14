@@ -1,9 +1,10 @@
 import Link from "next/link";
 import React from "react";
 
-interface IFormInput {
+interface IFormData {
   email: string;
   password: string;
+  OTP: number;
 }
 
 export default function ResetPassword() {
