@@ -1,15 +1,11 @@
 import Link from "next/link";
-import React from "react";
 
 export default function ForgetPassword() {
   return (
-    <section className="w-full text-gray-50 max-w-md mx-auto p-6">
-      <div className="mt-7 rounded-xl bg-gray-800 dark:border-gray-700">
+    <section className="w-full text-gray-800 max-w-md mx-auto p-6">
+      <div className="mt-7 rounded-xl bg-gray-50">
         <div className="p-4 sm:p-7">
           <div className="text-center">
-            <h1 className="block text-2xl font-bold dark:text-white">
-              Forgot password?
-            </h1>
             <p className="mt-2 text-sm dark:text-gray-400">
               Remember your password?
               <Link
@@ -50,7 +46,7 @@ export default function ForgetPassword() {
                 </div>
                 <button
                   type="submit"
-                  className="py-3 px-4 inline-flex justify-center items-center gap-2 border border-transparent font-semibold bg-gradient-to-r from-[#03A776] to-[#0D1519] rounded-md shadow-lg text-white transition-all text-sm"
+                  className="py-3 px-4 inline-flex justify-center items-center gap-2 border border-transparent font-semibold bg-gray-800 rounded-md shadow-lg text-white transition-all text-sm"
                 >
                   Reset password
                 </button>

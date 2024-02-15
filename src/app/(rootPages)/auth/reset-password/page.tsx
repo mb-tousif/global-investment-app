@@ -39,7 +39,7 @@ export default function ResetPassword() {
               name="password"
               type="password"
               className="w-full py-3 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-slate-500 hover:shadow"
-              placeholder="Enter email address"
+              placeholder="Enter new password"
             />
           </label>
           <button className="w-full py-3 font-medium text-white bg-gradient-to-r from-[#03A776] to-[#0D1519] shadow-lg rounded-lg border-indigo-500 hover:shadow inline-flex space-x-2 items-center justify-center">

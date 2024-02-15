@@ -1,6 +1,6 @@
 "use client"
 import Loader from "@/app/loader";
-import { getToken, setToken } from "@/redux/app/auth/authSlice";
+import { setToken } from "@/redux/app/auth/authSlice";
 import { useAppDispatch } from "@/redux/hooks";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
@@ -122,7 +122,16 @@ export default function Login() {
           >
             Login
           </button>
-          <p className="text-base text-center mt-4 text-gray-50">
+          <p className="mt-4 text-base text-gray-50 text-center">
+            Forgot password?
+            <Link
+              className="text-gray-50 ml-2 pb-2 decoration-2 hover:underline font-medium"
+              href="/auth/forget-password"
+            >
+              Reset here
+            </Link>
+          </p>
+          <p className="text-base text-center mt-2 text-gray-50">
             Do not have an account?
             <Link
               href="/auth/register"
