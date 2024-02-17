@@ -21,7 +21,6 @@ export default function Login() {
     useLoginUserMutation();
   const dispatch = useAppDispatch();
   const router = useRouter();
-
   const {
     register,
     handleSubmit,

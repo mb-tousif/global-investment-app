@@ -1,6 +1,20 @@
+"use client"
 import Link from "next/link";
-
+import { useForm } from "react-hook-form";
+interface IFormDataType {
+  email: string 
+}
 export default function ForgetPassword() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<IFormDataType>({
+    mode: "onBlur",
+  });
+  const onSubmit = async (data: IFormDataType) => {
+    console.log(data);
+  };
   return (
     <section className="w-full text-gray-800 max-w-md mx-auto p-6">
       <div className="mt-7 rounded-xl bg-gray-50">
@@ -9,16 +23,15 @@ export default function ForgetPassword() {
             <p className="mt-2 text-sm dark:text-gray-400">
               Remember your password?
               <Link
-                className="text-gray-50 ml-2 pb-2 decoration-2 hover:underline font-medium"
+                className="ml-2 pb-2 decoration-2 hover:underline font-medium"
                 href="/auth/login"
               >
                 Login here
               </Link>
             </p>
           </div>
-
           <div className="mt-5">
-            <form>
+            <form onSubmit={handleSubmit(onSubmit)}>
               <div className="grid gap-y-4">
                 <div>
                   <label
@@ -30,19 +43,18 @@ export default function ForgetPassword() {
                   <div className="relative">
                     <input
                       type="email"
-                      name="email"
                       className="py-3 px-4 block w-full border-2 border-gray-200 rounded-md text-sm shadow-sm"
-                      required
-                      aria-describedby="email-error"
+                      placeholder="Enter your email address"
+                      {...register("email", {
+                        required: "Please enter your email address",
+                      })}
                     />
                   </div>
-                  <p
-                    className="hidden text-xs text-red-600 mt-2"
-                    id="email-error"
-                  >
-                    Please include a valid email address so we can get back to
-                    you
-                  </p>
+                  {errors.email && (
+                    <p className="text-red-500 text-xs mt-1">
+                      {errors.email.message}
+                    </p>
+                  )}
                 </div>
                 <button
                   type="submit"
