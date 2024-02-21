@@ -48,14 +48,14 @@ export const navBarRoutes = [
    },
  ];
 
-const dashboardRoutes = () => { 
+const dashboardRoutes = (roleDashboard:TUserRole) => { 
 
 const commonRoutes = [
   {
     id: 6,
     name: "My Profile",
     icon: <RiAccountBoxFill className="w-6 h-8" />,
-    link: `/dashboard/${role}/profile`,
+    link: `/dashboard/${roleDashboard}/profile`,
   },
   {
     id: 7,
@@ -70,25 +70,25 @@ const dashboardAccountHoldersRoutes = [
     id: 8,
     name: "My Wallet",
     icon: <ImProfile className="w-6 h-8" />,
-    link: `/dashboard/${role}/wallet`,
+    link: `/dashboard/${roleDashboard}/wallet`,
   },
   {
     id: 9,
     name: "Deposits",
     icon: <MdOutlineGetApp className="w-6 h-8" />,
-    link: `/dashboard/${role}/deposits`,
+    link: `/dashboard/${roleDashboard}/deposits`,
   },
   {
     id: 10,
     name: "Transfers",
     icon: <TbTransferOut className="w-6 h-8" />,
-    link: `/dashboard/${role}/transfers`,
+    link: `/dashboard/${roleDashboard}/transfers`,
   },
   {
     id: 11,
     name: "Withdraws",
     icon: <GiTakeMyMoney className="w-6 h-8" />,
-    link: `/dashboard/${role}/withdraws`,
+    link: `/dashboard/${roleDashboard}/withdraws`,
   },
 ];
 
@@ -97,15 +97,16 @@ const dashboardCashiersRoutes = [
     id: 12,
     name: "Revenues",
     icon: <GiProfit className="w-6 h-8" />,
-    link: `/dashboard/${role}/revenues`,
-  }];
+    link: `/dashboard/${roleDashboard}/revenues`,
+  },
+];
 
 const dashboardManagersRoutes = [
   {
     id: 13,
     name: "Revenues",
     icon: <GiProfit className="w-6 h-8" />,
-    link: `/dashboard/${role}/revenues`,
+    link: `/dashboard/${roleDashboard}/revenues`,
   },
 ];
 
@@ -114,8 +115,9 @@ const dashboardManagersRoutes = [
       id: 14,
       name: "Revenues",
       icon: <GiProfit className="w-6 h-8" />,
-      link: `/dashboard/${role}/revenues`,
-    }];
+      link: `/dashboard/${roleDashboard}/revenues`,
+    },
+  ];
 
 
 const dashboardAdminRoutes = [
@@ -123,26 +125,22 @@ const dashboardAdminRoutes = [
     id: 15,
     name: "Admin Panel",
     icon: <MdAdminPanelSettings className="w-6 h-8" />,
-    link: `/dashboard/${role}/admins`,
+    link: `/dashboard/${roleDashboard}/admins`,
   },
 ];
 
-if (role === ENUM_USER_ROLES.ACCOUNT_HOLDER) {
+if (roleDashboard === ENUM_USER_ROLES.ACCOUNT_HOLDER) {
   return [...commonRoutes, ...dashboardAccountHoldersRoutes];
-} else if (role === ENUM_USER_ROLES.CASHIER) {
+} else if (roleDashboard === ENUM_USER_ROLES.CASHIER) {
   return [...commonRoutes, ...dashboardCashiersRoutes];
-}
-else if (role === ENUM_USER_ROLES.MANAGER) {
+} else if (roleDashboard === ENUM_USER_ROLES.MANAGER) {
   return [...commonRoutes, ...dashboardManagersRoutes];
-}
-else if (role === ENUM_USER_ROLES.CEO) {
+} else if (roleDashboard === ENUM_USER_ROLES.CEO) {
   return [...commonRoutes, ...dashboardCEORoutes];
-}
-else if (role === ENUM_USER_ROLES.ADMIN) {
+} else if (roleDashboard === ENUM_USER_ROLES.ADMIN) {
   return [...commonRoutes, ...dashboardAdminRoutes];
-}
-else {
-  return [ ...commonRoutes];
+} else {
+  return [...commonRoutes];
 }
 }
 export default dashboardRoutes;

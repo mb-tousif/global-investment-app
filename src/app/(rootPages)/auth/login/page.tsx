@@ -57,7 +57,7 @@ export default function Login() {
   }
 
   return (
-    <div className="min-h-[500px] overflow-hidden flex items-center md:mt-16 justify-center">
+    <div className="min-h-[500px] overflow-hidden flex items-center md:mt-20 justify-center md:mb-8">
       <div className="bg-gradient-to-b from-[#063970] to-blue-200 lg:w-5/12 md:6/12 w-10/12 shadow-3xl rounded-3xl">
         <div className="bg-[#063970] absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full p-4 md:p-8">
           <RiBankFill className="w-12 h-12 mx-auto text-gray-50" />

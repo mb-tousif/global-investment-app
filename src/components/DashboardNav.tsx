@@ -1,14 +1,29 @@
 "use client";
-import React from "react";
+import React, { use, useEffect, useState } from "react";
 import Link from "next/link";
 import { HiHome } from "react-icons/hi";
 import dashboardRoutes from "@/constants/routeConstants";
+import { ENUM_USER_ROLES, TUserRole } from "@/constants/common";
+import { jwtDecode } from "jwt-decode";
+import { getToken } from "@/redux/app/auth/authSlice";
+import { useRouter } from "next/navigation";
 
 export default function DashboardNav() {
-  const navigate = (path:string) => {
-    window.location.pathname = path;
-  }
-  const routes= dashboardRoutes();
+  const [role, setRole] = useState<TUserRole>();
+  const token = getToken();
+  
+  useEffect(() => {
+    if (token) {
+      const userCredentials: {
+        id: string;
+        role: TUserRole;
+        iat: number;
+        exp: number;
+      } = jwtDecode(token as string);
+      setRole(userCredentials?.role);
+    }
+  },[ token]);
+  const routes = dashboardRoutes(role as TUserRole);
 
   return (
     <div className="sm:min-w-[38vh] text-left top-0 pb-6 left-0 min-h-screen bg-gradient-to-b from-[#D0DAE3] to-[#ADCDED]">
