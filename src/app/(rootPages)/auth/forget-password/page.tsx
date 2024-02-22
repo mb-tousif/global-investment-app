@@ -1,10 +1,15 @@
 "use client"
+import { useForgetPasswordMutation } from "@/redux/app/auth/authApiEndPoints";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 interface IFormDataType {
   email: string 
 }
-export default function ForgetPassword() {
+export default function ForgetPasswordPage() {
+  const [ forgetPassword, {isError, isSuccess} ]= useForgetPasswordMutation();
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -13,8 +18,17 @@ export default function ForgetPassword() {
     mode: "onBlur",
   });
   const onSubmit = async (data: IFormDataType) => {
-    console.log(data);
+    const res = await forgetPassword(data);
+    // @ts-ignore
+    toast.success(res?.data?.message);
   };
+  if (isSuccess) {
+    router.push("/auth/verify-email");
+  }
+  if (isError) {
+    // @ts-ignore
+    toast.error(isError?.data?.message);
+  }
   return (
     <section className="w-full text-gray-800 max-w-md mx-auto p-6">
       <div className="mt-7 rounded-xl bg-gray-50">

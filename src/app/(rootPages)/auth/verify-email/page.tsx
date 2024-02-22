@@ -1,6 +1,9 @@
 "use client";
+import { useVerifyOtpMutation } from '@/redux/app/auth/authApiEndPoints';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
 
 interface IFormInput {
   email: string;
@@ -13,10 +16,27 @@ export default function VerifyUser() {
       handleSubmit,
       formState: { errors },
     } = useForm<IFormInput>();
+    const [ verifyOtp, {isError, isSuccess} ]= useVerifyOtpMutation();
+    const router = useRouter();
+    const onSubmit = async (data: IFormInput) => {
+      data.OTP = Number(data.OTP);
+      await verifyOtp(data);
+    };
+    if (isSuccess) {
+      toast.success("OTP Verified Successfully");
+      router.push("/auth/reset-password")
+    };
+    if (isError) {
+      // @ts-ignore
+      toast.error("Something went wrong, please try again");
+    }
   return (
     <div className="w-full md:1/2 lg:w-2/3 mx-auto my-auto mt-4 mb-4">
       <div className="w-full px-8 md:px-32 lg:px-24">
-        <form className="bg-gray-400 rounded-md shadow-2xl p-5">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="bg-gray-400 rounded-md shadow-2xl p-5"
+        >
           <h1 className="text-gray-50 font-bold text-2xl mb-1">
             Hello Our Valued User
           </h1>
@@ -39,7 +59,7 @@ export default function VerifyUser() {
               />
             </svg>
             <input
-              className="pl-2 w-full outline-none bg-gray-400 border-none"
+              className="pl-2 w-full bg-transparent outline-none border-none"
               type="email"
               {...register("email", {
                 required: {
@@ -66,9 +86,13 @@ export default function VerifyUser() {
             <input
               className="pl-2 w-full bg-gray-400 focus:bg-gray-400 outline-none border-none"
               type="number"
-              name="password"
-              id="password"
               placeholder="Enter OTP"
+              {...register("OTP", {
+                required: {
+                  value: true,
+                  message: "OTP is required",
+                },
+              })}
             />
           </div>
           <div className="flex justify-between mt-4">
