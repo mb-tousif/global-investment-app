@@ -17,7 +17,7 @@ interface IFormInput {
 }
 
 export default function Login() {
-  const [loginUser, { isError, isSuccess, isLoading, data }] =
+  const [loginUser, { isSuccess, isLoading, data }] =
     useLoginUserMutation();
   const dispatch = useAppDispatch();
   const router = useRouter();
