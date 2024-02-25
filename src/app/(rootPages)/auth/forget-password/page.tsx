@@ -23,7 +23,7 @@ export default function ForgetPasswordPage() {
     toast.success(res?.data?.message);
   };
   if (isSuccess) {
-    router.push("/auth/verify-email");
+    router.push("/auth/reset-password");
   }
   if (isError) {
     // @ts-ignore
